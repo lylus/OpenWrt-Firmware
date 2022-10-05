@@ -53,6 +53,8 @@ else
 
 	wget -O sha256sums ${sha256sums_url}
 	
+	echo "正在下载固件，请耐心等待。"
+	
 	wget -O immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz ${releases_url}
 
 
