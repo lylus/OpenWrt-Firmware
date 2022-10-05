@@ -4,7 +4,6 @@
 
 # cd /etc/config && wget -O autoupdate.sh https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh && chmod 700 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
 
-# 使用上面的命令后，在计划任务里添加括号里的代码，每隔两天的凌晨5点自动检测更新，有更新就自动更新固件[0 5 */2 * * /etc/config/autoupdate.sh]
 
 # 获取固件最新版本号
 	cd /etc/config
@@ -61,24 +60,33 @@ else
 
 	chmod 755 immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
 
-	sha256sum -c sha256sums 2> /dev/null | grep OK
+	sha256=$(sha256sum -c sha256sums 2> /dev/null | grep OK)
+	
+if [ "$sha256" = "immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz: OK" ]
 
+then
 	cd /etc/config
 
 	cp -f ./version.txt ./oldver.txt
 
 	rm -rf ./version.txt
 
-	echo "准备更新，更新完成自动重启!"
+	echo "验证sha256sum正确，准备更新，更新完成自动重启!"
 
-	sleep 3
+	sleep 5
 
-	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
+#	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
 
 	echo "新版本，已更新完成!"
 
+else
+
+	echo "sha256sum未通过校验，3秒后开始重试。"
+	sleep 3
+/etc/config/autoupdate.sh
 
 fi
 
+fi
 
-     echo "运行成功！"
+     echo "脚本运行结束！"
