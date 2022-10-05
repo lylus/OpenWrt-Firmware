@@ -4,6 +4,7 @@
 
 # cd /etc/config && wget -O autoupdate.sh https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh && chmod 700 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
 
+# 使用上面的命令后，在计划任务里添加括号里的代码，每隔两天的凌晨5点自动检测更新，有更新就自动更新固件[0 5 */2 * * /etc/config/autoupdate.sh]
 
 # 获取固件最新版本号
 	cd /etc/config
