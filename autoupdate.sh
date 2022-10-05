@@ -75,7 +75,7 @@ then
 
 	sleep 5
 
-#	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
+	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
 
 	echo "新版本，已更新完成!"
 
