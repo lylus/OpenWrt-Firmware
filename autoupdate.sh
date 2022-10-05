@@ -61,9 +61,11 @@ else
 
 	rm -rf ./version.txt
 
+	echo "准备更新，更新完成自动重启!"
+
+	sleep 3000
+
 	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
-
-
 
 	echo "新版本，已更新完成!"
 
