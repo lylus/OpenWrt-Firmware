@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# 本脚本需要复制到/etc/config目录下使用，或直接ssh登录openwrt后复制下面的代码：
+# 本脚本需要复制到/etc/config目录下使用，或直接ssh登录openwrt后复制下面的代码,注意，复制时不要带上第一个字符#：
 
-wget -P /etc/config https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh && chmod 755 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
+# wget https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh -P /etc/config && chmod 755 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
 
 
 # 获取固件最新版本号
