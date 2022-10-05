@@ -70,7 +70,7 @@ else
 
 	echo "准备更新，更新完成自动重启!"
 
-	sleep 3000
+	sleep 3
 
 	sysupgrade /tmp/immortalwrt-x86-64-generic-squashfs-combined-efi.img.gz
 
