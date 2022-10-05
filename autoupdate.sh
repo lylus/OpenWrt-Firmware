@@ -28,10 +28,10 @@ EOF
 #	opkg install coreutils-sha256sum
 
         old_ver=$(cat ./oldver.txt)
-#       echo "check old frp version results are: $old_ver"
+
         echo "检测到本机上次更新的版本: $old_ver"
 
-#       echo "check new frp version results are: $get_releases"
+
         echo "检测到最新的版本: $get_releases"
 
 if [ "$old_ver" = "$get_releases" ]
@@ -39,7 +39,6 @@ if [ "$old_ver" = "$get_releases" ]
 then
 
 echo "没有检测到新的版本!"
-#echo "check new version"
 
 else
 # 更新固件
