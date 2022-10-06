@@ -4,6 +4,9 @@
 
 # cd /etc/config && wget -O autoupdate.sh https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh && chmod 700 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
 
+# 在openwrt的luci界面的计划任务里面添加如下命令，可实时自动更新，例如下面的命令为 每两天的凌晨5点执行更新。
+
+# 0 5 */2 * * /etc/config/autoupdate.sh
 
 # 获取固件最新版本号
 	cd /etc/config
