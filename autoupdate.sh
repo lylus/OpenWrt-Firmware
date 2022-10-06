@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 本脚本需要复制到/etc/config目录下使用，或直接ssh登录openwrt后复制下面的代码,注意，复制时不要带上第一个字符#：
+# 本脚本需要复制到/etc/config目录下使用，或直接ssh登录openwrt后复制下面的代码,注意，复制时不要带上第一个字符#！！！！！
 
 # cd /etc/config && wget -O autoupdate.sh https://github.com/lylus/OpenWrt-Firmware/raw/main/autoupdate.sh && chmod 700 /etc/config/autoupdate.sh && /etc/config/autoupdate.sh
 
